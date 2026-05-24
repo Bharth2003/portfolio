@@ -44,7 +44,7 @@
 
 html {
   overflow-x: hidden;
-  font-size: 12px; /* Further reduced for better mobile/laptop fit */
+  font-size: 10px;
 }
 
 body {
