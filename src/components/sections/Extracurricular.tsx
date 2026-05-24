@@ -14,7 +14,7 @@ function getIcon(iconName: string) {
 
 export function Extracurricular() {
   return (
-    <section id="extracurricular" className="py-24">
+    <section id="extracurricular" className="py-16">
       <div className="section-container">
         <SectionHeading
           title="Leadership & Activities"
@@ -35,14 +35,14 @@ export function Extracurricular() {
                 key={item.id}
                 variants={scaleIn}
                 whileHover={{ y: -4 }}
-                className="p-8 rounded-xl bg-card border border-card-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                className="p-6 rounded-xl bg-card border border-card-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
               >
                 <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4">
-                  <Icon size={24} className="text-primary" />
+                  <Icon size={18} className="text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground text-[2rem]">{item.title}</h3>
-                <p className="text-[1.5rem] text-primary mt-1">{item.organization}</p>
-                <p className="mt-3 text-[1.5rem] text-muted-foreground leading-relaxed">
+                <h3 className="font-semibold text-foreground text-base">{item.title}</h3>
+                <p className="text-sm text-primary mt-1">{item.organization}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>

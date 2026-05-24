@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 bg-muted/30">
+    <section id="experience" className="py-16 bg-muted/30">
       <div className="section-container">
         <SectionHeading
           title="Experience & Education"
@@ -44,22 +44,22 @@ export function Experience() {
 
                 <div
                   className={cn(
-                    "flex-1 p-8 rounded-xl bg-card border border-card-border",
+                    "flex-1 p-6 rounded-xl bg-card border border-card-border",
                     "hover:border-primary/30 transition-colors"
                   )}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                     <div>
-                      <h3 className="text-[2.5rem] font-bold text-foreground">{item.title}</h3>
-                      <p className="text-[1.8rem] text-primary font-medium">
+                      <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                      <p className="text-sm text-primary font-medium">
                         {item.organization}
                       </p>
                     </div>
                     <div className="text-right">
-                      <p className="text-[1.6rem] text-muted-foreground">
+                      <p className="text-xs text-muted-foreground">
                         {item.startDate} — {item.endDate}
                       </p>
-                      <p className="text-[1.6rem] text-muted-foreground">{item.location}</p>
+                      <p className="text-xs text-muted-foreground">{item.location}</p>
                     </div>
                   </div>
 
@@ -67,7 +67,7 @@ export function Experience() {
                     {item.description.map((point, i) => (
                       <li
                         key={i}
-                        className="text-[1.8rem] text-muted-foreground flex items-start gap-2"
+                        className="text-sm text-muted-foreground flex items-start gap-2"
                       >
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
                         {point}

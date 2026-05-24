@@ -32,37 +32,37 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
-        className="relative w-full max-w-[95vw] lg:max-w-7xl max-h-[90vh] overflow-y-auto rounded-2xl bg-card border border-card-border p-12 shadow-2xl"
+        className="relative w-full max-w-[90vw] lg:max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl bg-card border border-card-border p-8 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-3 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors z-10"
+          className="absolute top-4 right-4 p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors z-10"
         >
-          <X size={32} />
+          <X size={24} />
         </button>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column — Title, Tags, Description */}
           <div>
             {project.institution && (
-              <p className="text-[1.6rem] text-primary font-medium uppercase tracking-wide mb-3">
+              <p className="text-xs text-primary font-medium uppercase tracking-wide mb-2">
                 {project.institution} &bull; {project.year}
               </p>
             )}
 
-            <h3 className="text-[4.5rem] font-bold text-foreground pr-8 leading-[1.1]">{project.title}</h3>
+            <h3 className="text-2xl font-bold text-foreground pr-8 leading-[1.2]">{project.title}</h3>
             {project.tagline && (
-              <p className="mt-2 text-muted-foreground text-[2rem]">{project.tagline}</p>
+              <p className="mt-1 text-muted-foreground text-sm">{project.tagline}</p>
             )}
 
-            <div className="flex flex-wrap gap-3 mt-6">
+            <div className="flex flex-wrap gap-2 mt-4">
               {project.tags.map((tag) => (
                 <Badge key={tag} variant="primary">{tag}</Badge>
               ))}
             </div>
 
-            <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed text-[2rem]">
+            <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed text-sm">
               <p>{project.longDescription || project.description}</p>
             </div>
           </div>
@@ -70,14 +70,14 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           {/* Right Column — Challenges, Outcomes, Buttons */}
           <div>
             {project.challenges && (
-              <div className="mb-8">
-                <h4 className="text-[2rem] font-semibold text-foreground uppercase tracking-wide mb-4">
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">
                   Key Challenges
                 </h4>
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                   {project.challenges.map((c, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[1.8rem] text-muted-foreground">
-                      <ChevronRight size={26} className="mt-1 text-primary flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <ChevronRight size={16} className="mt-0.5 text-primary flex-shrink-0" />
                       {c}
                     </li>
                   ))}
@@ -86,14 +86,14 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             )}
 
             {project.outcomes && (
-              <div className="mb-8">
-                <h4 className="text-[2rem] font-semibold text-foreground uppercase tracking-wide mb-4">
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">
                   Outcomes & Impact
                 </h4>
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                   {project.outcomes.map((o, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[1.8rem] text-muted-foreground">
-                      <ChevronRight size={26} className="mt-1 text-secondary flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <ChevronRight size={16} className="mt-0.5 text-secondary flex-shrink-0" />
                       {o}
                     </li>
                   ))}
@@ -102,15 +102,15 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             )}
 
             {(project.github || project.demo) && (
-              <div className="flex flex-wrap gap-4 mt-6">
+              <div className="flex flex-wrap gap-3 mt-4">
                 {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-[3rem] py-[1.8rem] text-[1.8rem] rounded-lg bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm rounded-lg bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
-                    <GithubIcon size={28} /> View Code
+                    <GithubIcon size={18} /> View Code
                   </a>
                 )}
                 {project.demo && (
@@ -118,9 +118,9 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-[3rem] py-[1.8rem] text-[1.8rem] rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-colors"
                   >
-                    <ExternalLink size={28} /> Live Demo
+                    <ExternalLink size={18} /> Live Demo
                   </a>
                 )}
               </div>
@@ -138,7 +138,7 @@ export function Projects() {
   const others = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-16">
       <div className="section-container">
         <SectionHeading
           title="Featured Projects"
@@ -162,30 +162,30 @@ export function Projects() {
               onClick={() => setSelectedProject(project)}
             >
               {/* Image placeholder */}
-              <div className="h-52 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                <span className="text-5xl font-bold text-foreground/10">
+              <div className="h-40 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                <span className="text-3xl font-bold text-foreground/10">
                   {project.title.split(" ").map(w => w[0]).join("").slice(0, 3)}
                 </span>
               </div>
 
-              <div className="p-8">
+              <div className="p-6">
                 {project.institution && (
-                  <p className="text-[1.6rem] text-primary font-medium uppercase tracking-wide mb-1">
+                  <p className="text-xs text-primary font-medium uppercase tracking-wide mb-1">
                     {project.institution} &bull; {project.year}
                   </p>
                 )}
-                <h3 className="text-[2.8rem] font-bold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
                 {project.tagline && (
-                  <p className="mt-1 text-[1.8rem] text-muted-foreground">{project.tagline}</p>
+                  <p className="mt-0.5 text-sm text-muted-foreground">{project.tagline}</p>
                 )}
 
-                <p className="mt-3 text-[1.8rem] text-muted-foreground line-clamp-3">
+                <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-5">
+                <div className="flex flex-wrap gap-1.5 mt-3">
                   {project.tags.slice(0, 4).map((tag) => (
                     <Badge key={tag}>{tag}</Badge>
                   ))}
@@ -195,7 +195,7 @@ export function Projects() {
                 </div>
 
                 {project.metrics && (
-                  <p className="mt-4 text-[1.5rem] font-medium text-secondary">
+                  <p className="mt-3 text-xs font-medium text-secondary">
                     {project.metrics}
                   </p>
                 )}
@@ -213,16 +213,16 @@ export function Projects() {
             viewport={{ once: true }}
             className="mt-12"
           >
-            <h3 className="text-[2rem] font-semibold text-foreground mb-6">Other Projects</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">Other Projects</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {others.map((project) => (
                 <div
                   key={project.id}
-                  className="p-8 rounded-xl bg-card border border-card-border hover:border-primary/30 transition-colors cursor-pointer"
+                  className="p-6 rounded-xl bg-card border border-card-border hover:border-primary/30 transition-colors cursor-pointer"
                   onClick={() => setSelectedProject(project)}
                 >
-                  <h4 className="font-semibold text-foreground text-[2rem]">{project.title}</h4>
-                  <p className="mt-1 text-[1.5rem] text-muted-foreground">{project.tagline}</p>
+                  <h4 className="font-semibold text-foreground text-base">{project.title}</h4>
+                  <p className="mt-0.5 text-sm text-muted-foreground">{project.tagline}</p>
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {project.tags.slice(0, 3).map((tag) => (
                       <Badge key={tag}>{tag}</Badge>
@@ -246,9 +246,9 @@ export function Projects() {
             href={siteConfig.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[1.5rem] font-medium text-muted-foreground hover:text-primary transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
-            <GithubIcon size={28} /> View All Projects on GitHub
+            <GithubIcon size={18} /> View All Projects on GitHub
           </a>
         </motion.div>
       </div>

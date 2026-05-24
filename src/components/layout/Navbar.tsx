@@ -40,18 +40,18 @@ export function Navbar() {
         className="absolute inset-0 bg-background/80 backdrop-blur-xl border-b border-card-border/50"
         style={{ opacity: bgOpacity }}
       />
-      <div className="relative section-container py-5 flex items-center justify-between">
-        <a href="#" className="text-[4.5rem] font-bold tracking-tight text-foreground">
+      <div className="relative section-container py-3 flex items-center justify-between">
+        <a href="#" className="text-xl font-bold tracking-tight text-foreground">
           Bharth K S<span className="text-primary">.</span>
         </a>
 
-        <div className="hidden lg:flex items-center gap-[4rem]">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className={cn(
-                "text-[2rem] transition-colors duration-200",
+                "text-base transition-colors duration-200",
                 activeSection === link.href
                   ? "text-primary font-medium"
                   : "text-muted-foreground hover:text-foreground"
@@ -65,14 +65,14 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <button
             onClick={toggleTheme}
-            className="p-[1.2rem] rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-            aria-label="Toggle theme"
+            className="p-3 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
           >
-            {theme === "dark" ? <Sun size={28} /> : <Moon size={28} />}
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <a
             href="#contact"
-            className="px-[3.5rem] py-[1.8rem] text-[1.8rem] font-medium rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-all"
+            className="px-5 py-2 text-base font-medium rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-all"
           >
             Contact
           </a>
@@ -100,7 +100,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-[2rem] text-muted-foreground hover:text-foreground transition-colors"
+                className="text-lg text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
@@ -115,7 +115,7 @@ export function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="px-[3rem] py-[1.5rem] text-[1.6rem] font-medium rounded-lg bg-primary text-primary-foreground"
+                className="px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground"
               >
                 Contact
               </a>
