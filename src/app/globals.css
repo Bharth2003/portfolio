@@ -44,13 +44,6 @@
 
 html {
   overflow-x: hidden;
-  font-size: 13px;
-}
-
-@media (max-width: 640px) {
-  html {
-    font-size: 10px;
-  }
 }
 
 body {
