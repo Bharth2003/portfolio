@@ -6,21 +6,21 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function About() {
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="py-24">
       <div className="section-container">
         <SectionHeading
           title="About Me"
           subtitle="Passionate about making AI systems and building intelligent solutions in robotics that are both powerful and safe"
         />
 
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInLeft}
           >
-            <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+            <div className="space-y-8 text-muted-foreground text-[2rem] md:text-[2.5rem] leading-relaxed">
               <p>
                 I'm an MSc Robotics student and a AI Enthusiasist with a deep passion for
                 building intelligent systems that operate safely in the real world. My
@@ -59,12 +59,12 @@ export function About() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="p-6 rounded-xl bg-card border border-card-border hover:border-primary/30 transition-colors"
+                  className="p-8 rounded-xl bg-card border border-card-border hover:border-primary/30 transition-colors"
                 >
-                  <p className="text-xs text-muted-foreground uppercase tracking-wide">
+                  <p className="text-[1.5rem] text-muted-foreground uppercase tracking-wide">
                     {item.label}
                   </p>
-                  <p className="mt-2 text-sm font-semibold text-foreground">{item.value}</p>
+                  <p className="mt-3 text-[2.5rem] font-semibold text-foreground">{item.value}</p>
                 </div>
               ))}
             </div>

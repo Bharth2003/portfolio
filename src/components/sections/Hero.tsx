@@ -20,19 +20,19 @@ export function Hero() {
         variants={heroStagger}
         initial="hidden"
         animate="visible"
-        className="relative section-container py-12 flex flex-col lg:flex-row items-center gap-8"
+        className="relative section-container py-20 flex flex-col lg:flex-row items-center gap-12"
       >
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 text-center">
           <motion.p
             variants={slideInFromBottom}
-            className="text-[1.2rem] md:text-[1.4rem] font-medium text-primary mb-4 tracking-wide uppercase"
+            className="text-[4rem] md:text-[5rem] font-medium text-primary mb-8 tracking-wide uppercase"
           >
             AI Enthusiastic & Robotics Engineer
           </motion.p>
 
           <motion.h1
             variants={slideInFromBottom}
-            className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-bold tracking-tight text-foreground leading-[1.1]"
+            className="text-[6rem] md:text-[8rem] lg:text-[12rem] font-bold tracking-tight text-foreground leading-[1.05]"
           >
             Building Intelligent
             <br />
@@ -44,7 +44,7 @@ export function Hero() {
 
           <motion.p
             variants={slideInFromBottom}
-            className="mt-6 text-[1rem] md:text-[1.15rem] text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            className="mt-10 text-[2.5rem] md:text-[3rem] text-muted-foreground max-w-4xl mx-auto leading-relaxed"
           >
             MSc Robotics student specialising in Intelligence systems, HRI, IoT, ROS, Generative AI, LLM safety, and
             embodied intelligence. Bridging the gap between powerful AI models and
@@ -53,16 +53,16 @@ export function Hero() {
 
           <motion.div
             variants={slideInFromBottom}
-            className="mt-8 flex flex-wrap gap-4 justify-center"
+            className="mt-12 flex flex-wrap gap-8 justify-center"
           >
-            <Button href="#projects" variant="primary" size="md">
-              View Projects <ArrowRight size={18} />
+            <Button href="#projects" variant="primary" size="lg">
+              View Projects <ArrowRight size={28} />
             </Button>
-            <Button href="/cv/my-cv.pdf" variant="outline" size="md">
-              Download CV <Download size={18} />
+            <Button href="/cv/my-cv.pdf" variant="outline" size="lg">
+              Download CV <Download size={28} />
             </Button>
-            <Button href="#contact" variant="ghost" size="md">
-              Get in Touch <Mail size={18} />
+            <Button href="#contact" variant="ghost" size="lg">
+              Get in Touch <Mail size={28} />
             </Button>
           </motion.div>
         </div>
@@ -71,7 +71,7 @@ export function Hero() {
           variants={slideInFromBottom}
           className="flex-shrink-0 mx-auto"
         >
-          <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
+          <div className="relative w-[700px] h-[700px] lg:w-[850px] lg:h-[850px]">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-2xl" />
             <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 border border-card-border flex items-center justify-center overflow-hidden">
               <Image
@@ -79,7 +79,7 @@ export function Hero() {
                 alt="Bharth K S"
                 fill
                 className="object-cover object-center"
-                sizes="(max-width: 1024px) 300px, 400px"
+                sizes="(max-width: 1024px) 700px, 850px"
                 priority
               />
             </div>

@@ -22,13 +22,13 @@ function LinkedinIcon({ size = 20 }: { size?: number }) {
 export function Footer() {
   return (
     <footer className="border-t border-card-border bg-card/50">
-        <div className="section-container py-8">
+      <div className="section-container py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <span className="text-lg font-bold tracking-tight text-foreground">
+            <span className="text-[4rem] font-bold tracking-tight text-foreground">
               Bharth K S<span className="text-primary">.</span>
             </span>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-[2rem] text-muted-foreground">
               Robotics & AI Engineer
             </p>
           </div>
@@ -38,40 +38,40 @@ export function Footer() {
               href={siteConfig.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-                className="p-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                className="p-[1.5rem] rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                 aria-label="GitHub"
               >
-                <GithubIcon size={20} />
+                <GithubIcon size={28} />
               </a>
               <a
                 href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                className="p-[1.5rem] rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                 aria-label="LinkedIn"
               >
-                <LinkedinIcon size={20} />
+                <LinkedinIcon size={28} />
               </a>
               <a
                 href={`mailto:${siteConfig.socials.email}`}
-                className="p-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                className="p-[1.5rem] rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                 aria-label="Email"
               >
-                <Mail size={20} />
+                <Mail size={28} />
             </a>
           </div>
 
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="p-3 rounded-lg border border-card-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            className="p-[1.5rem] rounded-lg border border-card-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             aria-label="Back to top"
           >
-            <ArrowUp size={20} />
+            <ArrowUp size={28} />
           </button>
         </div>
 
         <div className="mt-8 pt-6 border-t border-card-border text-center">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-[1.5rem] text-muted-foreground">
             &copy; {new Date().getFullYear()} Bharth K S. All rights reserved.
           </p>
         </div>

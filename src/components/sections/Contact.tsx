@@ -27,7 +27,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-16 bg-muted/30">
+    <section id="contact" className="py-24 bg-muted/30">
       <div className="section-container">
         <SectionHeading
           title="Let's Connect"
@@ -41,7 +41,7 @@ export function Contact() {
           variants={fadeInUp}
           className="text-center"
         >
-          <p className="text-base text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[2.5rem] text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
             Whether you're looking for an AI engineer, want to discuss research
             collaboration, or just want to chat about the future of embodied AI and robotics, feel free to reach out.
             I'd love to hear from you.
@@ -53,31 +53,31 @@ export function Contact() {
             size="lg"
             className="mb-8"
           >
-            <Mail size={18} /> Send Me an Email <ArrowUpRight size={16} />
+            <Mail size={26} /> Send Me an Email <ArrowUpRight size={24} />
           </Button>
 
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center gap-6 mt-8">
             <a
               href={siteConfig.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-card border border-card-border hover:border-primary/40 text-sm text-muted-foreground hover:text-foreground transition-all"
+              className="flex items-center gap-3 px-[3rem] py-[2rem] rounded-xl bg-card border border-card-border hover:border-primary/40 text-[1.8rem] text-muted-foreground hover:text-foreground transition-all"
             >
-              <LinkedinIcon size={18} /> LinkedIn
+              <LinkedinIcon size={28} /> LinkedIn
             </a>
             <a
               href={siteConfig.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-card border border-card-border hover:border-primary/40 text-sm text-muted-foreground hover:text-foreground transition-all"
+              className="flex items-center gap-3 px-[3rem] py-[2rem] rounded-xl bg-card border border-card-border hover:border-primary/40 text-[1.8rem] text-muted-foreground hover:text-foreground transition-all"
             >
-              <GithubIcon size={18} /> GitHub
+              <GithubIcon size={28} /> GitHub
             </a>
             <a
               href={`mailto:${siteConfig.socials.email}`}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-card border border-card-border hover:border-primary/40 text-sm text-muted-foreground hover:text-foreground transition-all"
+              className="flex items-center gap-3 px-[3rem] py-[2rem] rounded-xl bg-card border border-card-border hover:border-primary/40 text-[1.8rem] text-muted-foreground hover:text-foreground transition-all"
             >
-              <Mail size={18} /> Email
+              <Mail size={28} /> Email
             </a>
           </div>
         </motion.div>

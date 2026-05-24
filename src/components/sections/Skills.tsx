@@ -26,7 +26,7 @@ export function Skills() {
   const filteredSkills = skills.filter((s) => s.category === activeCategory);
 
   return (
-    <section id="skills" className="py-16 bg-muted/30">
+    <section id="skills" className="py-24 bg-muted/30">
       <div className="section-container">
         <SectionHeading
           title="Skills & Expertise"
@@ -41,7 +41,7 @@ export function Skills() {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300",
+                "px-[2.5rem] py-[1.5rem] rounded-lg text-[2rem] font-medium transition-all duration-300",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
                   : "bg-card border border-card-border text-muted-foreground hover:text-foreground hover:border-primary/30"
@@ -71,7 +71,7 @@ export function Skills() {
                   variants={scaleIn}
                   whileHover={{ scale: 1.03, y: -4 }}
                   className={cn(
-                    "group relative p-6 rounded-xl bg-card border border-card-border",
+                    "group relative p-8 rounded-xl bg-card border border-card-border",
                     "hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5",
                     "transition-shadow duration-300",
                     isLarge && "sm:col-span-2 lg:col-span-1"
@@ -81,18 +81,18 @@ export function Skills() {
                   <div className="relative">
                     <div className="flex items-start justify-between mb-3">
                       <div className="p-3 rounded-lg bg-muted border border-card-border group-hover:border-primary/20 transition-colors">
-                        <Icon size={20} className="text-primary" />
+                        <Icon size={32} className="text-primary" />
                       </div>
                         <span
                           className={cn(
-                            "px-3 py-1 text-xs font-medium rounded-full border",
+                            "px-[1.5rem] py-[0.8rem] text-[1.6rem] font-medium rounded-full border",
                           proficiencyColors[skill.proficiency]
                         )}
                       >
                         {skill.proficiency}
                       </span>
                     </div>
-                    <h3 className="font-semibold text-foreground text-base leading-snug">
+                    <h3 className="font-semibold text-foreground text-[2rem] leading-snug">
                       {skill.name}
                     </h3>
                   </div>

@@ -19,7 +19,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-300 cursor-pointer";
+    "inline-flex items-center justify-center gap-5 font-bold rounded-2xl transition-all duration-300 cursor-pointer";
 
   const variants = {
     primary:
@@ -33,9 +33,9 @@ export function Button({
   };
 
   const sizes = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-2.5 text-base",
-    lg: "px-8 py-3 text-lg",
+    sm: "px-[3rem] py-[1.8rem] text-[2.2rem]",
+    md: "px-[3.5rem] py-[2.2rem] text-[2.8rem]",
+    lg: "px-[5rem] py-[3rem] text-[3.5rem]",
   };
 
   if (href) {
