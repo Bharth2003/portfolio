@@ -61,7 +61,7 @@ export const extracurricular: ExtracurricularItem[] = [
   {
     id: "robotics-club",
     title: "The Robotics Society",
-    organization: "Kongu Engineering College",
+    organization: "Secretary",
     description: "Lead a 30+ member team in the club by providing various events, speech, workshops and Webinars in related to Mechatronics and Robotics field in Centre of Excellence for 1 year.",
     icon: "Bot",
   },
