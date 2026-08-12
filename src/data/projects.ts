@@ -2,6 +2,33 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "warehouse-robot-llm",
+    title: "Warehouse Robot LLM — Dissertation Project",
+    tagline: "Local-First Hybrid VLM-SLM Exception Recovery Pipeline",
+    description:
+      "MSc dissertation engineering an edge-first autonomous warehouse robot recovery pipeline. Five-stage architecture — Moondream2 VLM, privacy gateway, Qwen2.5-3B local reasoner, symbolic safety verifier, and Gemini Flash cloud fallback — evaluated on a 100-image warehouse corpus across four tracks.",
+    longDescription:
+      "This dissertation designs and implements an autonomous exception-recovery pipeline for warehouse robots that is local-first: frames are interpreted on-device and only escalate to the cloud when absolutely necessary. Stage A uses a Moondream2 vision model to describe warehouse frames; Stage B deterministically scrubs PII, aisle numbers, product brands, and facility coordinates before any downstream tier sees the text; Stage C runs a grammar-constrained Qwen2.5-3B model via Ollama that produces schema-valid action plans and auto-flags deadlocks when confidence drops below 0.75; Stage D applies a pure-Python symbolic verifier with four safety predicates (chemical protocol, manipulation feasibility, human proximity, safety envelope) and up to two retries; Stage E falls back to Gemini Flash only on verifier escalation, ending in either CLOUD_RECOVERY_AUTHORIZED or EMERGENCY_STOP_HALT. The evaluation harness runs all 100 corpus frames through four segregated tracks — VLM isolation, SLM error propagation, cross-embodiment (YouBot vs forklift), and the full pipeline — and packages evidence into a master six-sheet workbook.",
+    image: "/images/projects/warehouse-robot-llm.svg",
+    tags: ["Python", "Moondream2", "Qwen2.5-3B", "Ollama", "Gemini Flash", "Computer Vision", "Privacy", "Robotics"],
+    metrics: "100-image evaluation across 4 tracks · 5-stage local-first pipeline",
+    github: "https://github.com/Bharth2003/warehouse-robot-llm",
+    institution: "Heriot-Watt University",
+    year: "2026",
+    featured: true,
+    challenges: [
+      "Keeping sensitive warehouse data on-device — scrubbing PII, aisle numbers, product brands, and facility coordinates before any downstream tier",
+      "Producing schema-valid action plans from a small 3B local model with grammar-constrained generation and automatic deadlock detection",
+      "Guaranteeing safety with a deterministic symbolic verifier covering chemical protocol, manipulation feasibility, human proximity, and safety envelope",
+      "Balancing latency, privacy, and accuracy between local inference and cloud escalation",
+    ],
+    outcomes: [
+      "Five-stage local-first pipeline that escalates to Gemini Flash only when the verifier cannot authorise a plan",
+      "Auditable terminal decisions restricted to CLOUD_RECOVERY_AUTHORIZED or EMERGENCY_STOP_HALT",
+      "100-image corpus evaluation across four tracks — VLM isolation, SLM error propagation, cross-embodiment (YouBot vs forklift), and full pipeline",
+    ],
+  },
+  {
     id: "adversarial-embodied-ai",
     title: "Adversarial Safety in Embodied AI",
     tagline: "LLM Attack & Defence System for Responsible AI",
