@@ -43,19 +43,7 @@ export const experience: ExperienceItem[] = [
       "Operated Hyundai robots manually when problem occured and solved the issues when manufacturing is in progress",
     ],
   },
-  {
-    id: "kfc-team-member",
-    type: "work",
-    title: "Team Member",
-    organization: "KFC",
-    location: "Edinburgh, UK",
-    startDate: "Dec 2025",
-    endDate: "Present",
-    description: [
-      "Performing reliably in a fast-paced, high-pressure environment requiring rapid decision-making, clear communication, and team coordination",
-    ],
-  },
-];
+  ];
 
 export const extracurricular: ExtracurricularItem[] = [
   {
