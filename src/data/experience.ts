@@ -69,7 +69,7 @@ export const extracurricular: ExtracurricularItem[] = [
     id: "venture-cafe",
     title: "Venture Cafe's Edinburgh",
     organization: "Ambassador Volunteer",
-    description: "Guided and Volunteered Venture Cafe's like two months, in hospitality, Social Media, Marketing, Hosting and so on.",
+    description: "Guided and volunteered at Venture Cafe's Edinburgh in hospitality, social media, marketing, and hosting.",
     icon: "Trophy",
   },
   {
