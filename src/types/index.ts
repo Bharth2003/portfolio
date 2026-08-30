@@ -58,19 +58,6 @@ export interface NavLink {
   href: string;
 }
 
-export interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  tags: string[];
-  date: string;
-  readTime: string;
-  premium: boolean;
-  stripeUrl?: string;
-}
-
 export interface SiteConfig {
   name: string;
   title: string;
@@ -80,8 +67,5 @@ export interface SiteConfig {
     github: string;
     linkedin: string;
     email: string;
-  };
-  community: {
-    discord: string;
   };
 }
