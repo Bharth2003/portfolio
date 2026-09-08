@@ -29,6 +29,15 @@ If you want the code, it's all on GitHub. Below is the demo video and the screen
     videoUrl: "https://github.com/Bharth2003/RescueAgent/raw/main/rescueagent_demo_final%20(1).mp4",
     gallery: [
       "/images/blog/rescueagent/architecture.svg",
+      "/images/blog/rescueagent/01.png",
+      "/images/blog/rescueagent/02.png",
+      "/images/blog/rescueagent/03.png",
+      "/images/blog/rescueagent/04.png",
+      "/images/blog/rescueagent/05.png",
+      "/images/blog/rescueagent/06.png",
+      "/images/blog/rescueagent/07.png",
+      "/images/blog/rescueagent/08.png",
+      "/images/blog/rescueagent/09.png",
     ],
   },
 ];
