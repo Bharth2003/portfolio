@@ -7,15 +7,19 @@ export const blogs: BlogPost[] = [
     title: "RescueAgent — Agentic Food Rescue for Edinburgh",
     excerpt:
       "AWS Hackathon build: one sentence from a kitchen manager → FSA-classified, shelter-matched, and dispatched to the 3 nearest capable drivers on a live 60 fps OSRM map. 7 tools, Strands + Bedrock Qwen 3 235B.",
-    content: `Edinburgh throws away edible food every night while shelters a mile away run short. RescueAgent closes the coordination gap.
+    content: `Some nights in Edinburgh, perfectly good food gets binned while a shelter a mile away is short on meals. RescueAgent started as a simple question during the AWS hackathon: what if a kitchen manager could type one sentence and the rest just happened?
 
-A manager types "6 kg hot chicken curry and rice, cooked 40 minutes ago". The Strands agent (Qwen 3 235B on Bedrock eu-west-2) runs 7 tools in order: analyze_food_safety → find_eligible_shelter → broadcast_rescue → accept_rescue → route_lookup. Safety lives in the tools: hot food without a thermal bag is never offered — the filter removes those drivers before the model sees the list. Shelters are hard-filtered on accepts_hot/cold/meat + capacity, then ranked by demand weighted by distance. The 3 nearest capable drivers are offered the job, first to Accept wins.
+This blog is the build log, not the spec sheet. For the technical breakdown, the Featured Project card has the full architecture.
 
-The front end is 8 pages on Streamlit — Manager console, Driver app, Live Tracking, Operations, Shelters, Drivers, History, Alerts. The delivery state machine (broadcast → to_pickup → at_pickup → to_shelter → delivered) ticks via @st.fragment(run_every=1.0) while the browser animates the driver at 60 fps along the OSRM GeoJSON polyline interpolated by distance (point_at). Both roles watch the same live map.
+The spark was the handover — that 15-minute coordination gap where no one has time to check if food is still legally safe, which shelter can take it, and which volunteer is close enough with the right kit. We decided to make that invisible.
 
-Data: 1,612 Edinburgh restaurants (OSM Overpass), 20 hand-curated shelters, 40 drivers (6 vehicle classes), UK FSA thermal windows (90 min hot / 240 min chilled, 14 allergens), routes cached to data/routes_cache.json.
+Day one was messy. We got the agent to parse "6 kg hot chicken curry, cooked 40 minutes ago" correctly, then watched it try to offer hot food to a driver without a thermal bag. Fix was obvious in hindsight: move safety out of the prompt and into the tools. Once the filter removed those drivers before the model saw them, it stopped hallucinating past the rule.
 
-See the full project card for challenges, outcomes, and links. Demo video and gallery below.`,
+The live map was the hard part. OSRM gave us real road geometry, but Streamlit reruns every click. @st.fragment(run_every=1.0) finally let the map tick once a second while the browser animated at 60 fps — the first time the marker followed the road instead of cutting through buildings, we knew we had it.
+
+What stayed with me: testing with 1,612 real Edinburgh restaurants and 20 hand-curated shelters. Seeing real place names on a dark map made it feel less like a demo and more like a city.
+
+If you want the code, it's all on GitHub. Below is the demo video and the screens that tell the story better than I can.`,
     tags: ["AWS Hackathon", "Strands", "Bedrock", "Qwen 3", "Streamlit", "OSRM", "Food Rescue"],
     date: "2026-03-15",
     readTime: "8 min",

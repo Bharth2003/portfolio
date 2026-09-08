@@ -66,15 +66,12 @@ function BlogModal({ post, onClose }: { post: BlogPost; onClose: () => void }) {
               <source src={post.videoUrl} type="video/mp4" />
               Your browser does not support the video tag. <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" className="text-primary underline">Download video</a>
             </video>
-            <p className="mt-2 text-[1.3rem] text-muted-foreground">
-              If video doesn&apos;t load (GitHub raw mp4), <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">open in new tab</a> or upload to YouTube and replace <code className="px-1 py-0.5 rounded bg-muted">videoUrl</code> in <code className="px-1 py-0.5 rounded bg-muted">src/data/blogs.ts</code>.
-            </p>
           </div>
         )}
 
         {post.gallery && post.gallery.length > 0 && (
           <div className="mt-8">
-            <h4 className="text-[1.6rem] font-semibold text-foreground mb-3">Gallery — Architecture & Live Screens</h4>
+            <h4 className="text-[1.6rem] font-semibold text-foreground mb-3">Gallery</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {post.gallery.map((src) => (
                 <div key={src} className="rounded-xl overflow-hidden border border-card-border bg-black/40">
@@ -82,9 +79,6 @@ function BlogModal({ post, onClose }: { post: BlogPost; onClose: () => void }) {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-[1.3rem] text-muted-foreground">
-              Place your 7 screenshots + <code className="px-1 py-0.5 rounded bg-muted">architecture.svg</code> into <code className="px-1 py-0.5 rounded bg-muted">public/images/blog/rescueagent/</code> (already scaffolded). Replace the 1×1 placeholder PNGs with the actual uploads — no code change needed.
-            </p>
           </div>
         )}
 

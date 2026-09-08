@@ -48,18 +48,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <source src={post.videoUrl} type="video/mp4" />
             Your browser does not support the video tag. <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" className="text-primary underline">Download video</a>
           </video>
-          <p className="mt-2 text-[1.3rem] text-muted-foreground">
-            Hosted via GitHub raw mp4. For faster streaming, upload to YouTube/Loom and replace <code className="px-1 py-0.5 rounded bg-muted text-foreground">videoUrl</code> in <code className="px-1 py-0.5 rounded bg-muted text-foreground">src/data/blogs.ts</code>.
-          </p>
         </div>
       )}
 
       {post.gallery && post.gallery.length > 0 && (
         <div className="mt-10">
-          <h2 className="text-[2.2rem] font-bold text-foreground">Gallery — Architecture & Live Screens</h2>
-          <p className="mt-2 text-[1.5rem] text-muted-foreground">
-            Architecture diagram + 7 live UI states. Images live in <code className="px-1 py-0.5 rounded bg-muted text-foreground">public/images/blog/rescueagent/</code> — replace the 1×1 placeholders with your uploaded screenshots.
-          </p>
+          <h2 className="text-[2.2rem] font-bold text-foreground">Gallery</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
             {post.gallery.map((src) => (
               <div key={src} className="rounded-xl overflow-hidden border border-card-border bg-black/40">
