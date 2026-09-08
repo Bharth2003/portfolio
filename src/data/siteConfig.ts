@@ -11,6 +11,9 @@ export const siteConfig: SiteConfig = {
     linkedin: "https://www.linkedin.com/in/bharthks29/",
     email: "bharth.ks2003@gmail.com",
   },
+  community: {
+    discord: "https://discord.gg/REPLACE_ME",
+  },
 };
 
 export const navLinks: NavLink[] = [
@@ -18,5 +21,6 @@ export const navLinks: NavLink[] = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];

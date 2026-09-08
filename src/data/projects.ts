@@ -2,6 +2,33 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "rescue-agent",
+    title: "RescueAgent — Edinburgh Food Rescue",
+    tagline: "AWS Hackathon — Agentic Food Rescue Dispatch (Strands + Bedrock Qwen 3 235B)",
+    description:
+      "Hackathon-built agentic system that rescues surplus food in Edinburgh. A kitchen types one sentence — the agent classifies against UK FSA thermal rules, matches the nearest eligible shelter by capacity/demand, broadcasts to the 3 nearest capable volunteer drivers, and tracks the live OSRM road route until handover. Strands Agents SDK on Amazon Bedrock Qwen 3 235B, Streamlit live map, 1,612 restaurants + 20 shelters + 40 drivers.",
+    longDescription:
+      "RescueAgent was built for the AWS 'Agents for Humans' Hackathon (Good Neighbor Agents track) to solve Edinburgh's coordination gap: edible food is binned because a kitchen manager at closing time cannot manually verify FSA safety windows, find a shelter that accepts hot/cold/meat, and phone the nearest volunteer with the right vehicle and thermal bag. The agent enforces safety in tools, not prompts — seven @tool functions in tools.py: analyze_food_safety (90 min hot / 240 min chilled windows from safety_rules.json), find_eligible_shelter (hard-filter on accepts_hot_food/cold_food/meat + capacity, rank by demand weighted by distance), broadcast_rescue (capacity + accepts + thermal_bag filter, haversine sort, offer to nearest 3), accept_rescue (first-come-first-served), route_lookup/release_driver/dispatch_driver. Safety is tool-enforced: a driver without a thermal bag is never offered hot food. Routing uses OSRM with full GeoJSON polyline, cached to data/routes_cache.json and interpolated by distance via point_at() for 60 fps browser animation. The Streamlit UI (app.py) is an 8-page state machine (broadcast → to_pickup → at_pickup → to_shelter → delivered) with @st.fragment(run_every=1.0) live tracking — manager console, driver app, and shared live map (OpenStreetMap + st_folium) with ETA/distance HUD and st.toast notifications. Data: 1,612 real Edinburgh restaurants (OSM Overpass), 20 hand-curated shelters, 40 drivers (6 vehicle classes), FSA rules + 14 allergens. Deploy: Streamlit Community Cloud with AWS Bedrock Qwen 3 235B (eu-west-2), offline toggle runs tools without the model, precompute_routes.py warms the cache.",
+    image: "/images/projects/rescue-agent.svg",
+    tags: ["Python", "Strands Agents SDK", "Amazon Bedrock", "Qwen 3 235B", "Streamlit", "OSRM", "OpenStreetMap"],
+    metrics: "1,612 restaurants · 40 drivers · 90/240 min FSA windows · 60 fps live map",
+    github: "https://github.com/Bharth2003/RescueAgent",
+    demo: "https://rescueagent-edinburgh-food-rescue-d.vercel.app",
+    institution: "AWS Hackathon",
+    year: "2026",
+    featured: true,
+    challenges: [
+      "Enforcing UK FSA food safety (hot 90 min, chilled 240 min, thermal bag) in deterministic tools so the LLM cannot hallucinate past a safety rule",
+      "Matching shelters by eligibility + capacity + demand-weighted distance and broadcasting to the 3 nearest capable drivers with first-come-first-served acceptance",
+      "Producing 60 fps road-following animation from OSRM GeoJSON with distance-based interpolation and 1 s Streamlit fragments without full-page reruns",
+    ],
+    outcomes: [
+      "Single-agent Strands pipeline: one sentence → classified → shelter-matched → 3-driver broadcast → road route → live tracked handover",
+      "8-page Streamlit demo (Dashboard, Live Tracking, Manager/Driver side-by-side) with real-time ETA, impact metrics (meals, kg, CO₂), and session history",
+      "Live at rescueagent-edinburgh-food-rescue-d.vercel.app with offline tool-only fallback and precomputed OSRM cache",
+    ],
+  },
+  {
     id: "warehouse-robot-llm",
     title: "Warehouse Robot LLM — Dissertation Project",
     tagline: "Local-First Hybrid VLM-SLM Exception Recovery Pipeline",
