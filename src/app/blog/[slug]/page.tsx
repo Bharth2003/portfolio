@@ -9,14 +9,16 @@ export function generateStaticParams() {
   return blogs.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = blogs.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogs.find((p) => p.slug === slug);
   if (!post) return {};
   return { title: `${post.title} — Bharth K S`, description: post.excerpt };
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogs.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = blogs.find((p) => p.slug === slug);
   if (!post) notFound();
   const linkedProject = post.projectId ? projects.find((pr) => pr.id === post.projectId) : null;
 
