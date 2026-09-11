@@ -26,7 +26,6 @@ export function About() {
                 preload="metadata"
                 playsInline
                 className="w-full h-auto max-h-[520px] object-contain bg-black"
-                poster="/images/projects/rescue-agent.svg"
               >
                 <source src="/videos/about-me.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
