@@ -25,6 +25,7 @@ export function About() {
                 controls
                 preload="metadata"
                 playsInline
+                poster="/images/about-thumbnail.png"
                 className="w-full h-auto max-h-[520px] object-contain bg-black"
               >
                 <source src="/videos/about-me.mp4" type="video/mp4" />
