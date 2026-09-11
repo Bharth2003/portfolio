@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight, Calendar } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import React from "react";
 
@@ -55,6 +55,19 @@ export function Contact() {
           >
             <Mail size={26} /> Send Me an Email <ArrowUpRight size={24} />
           </Button>
+
+          <div className="mt-2 mb-8">
+            <p className="text-[1.6rem] text-muted-foreground uppercase tracking-wide mb-4">Get in touch</p>
+            <a
+              href="https://calendly.com/bharth-ks2003"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-[3rem] py-[2rem] rounded-xl bg-primary text-primary-foreground hover:opacity-90 transition-all text-[1.8rem] font-medium shadow-lg shadow-primary/10"
+            >
+              <Calendar size={28} /> Get in touch — Book a meeting <ArrowUpRight size={24} />
+            </a>
+            <p className="mt-3 text-[1.4rem] text-muted-foreground">Appointments & meetings via Calendly</p>
+          </div>
 
           <div className="flex justify-center gap-6 mt-8">
             <a
