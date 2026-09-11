@@ -31,7 +31,7 @@ function BlogModal({ post, onClose }: { post: BlogPost; onClose: () => void }) {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
-        className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-2xl bg-card border border-card-border p-10 shadow-2xl"
+        className="relative w-full max-w-[96vw] xl:max-w-[1400px] max-h-[92vh] overflow-y-auto rounded-2xl bg-card border border-card-border p-8 lg:p-10 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -57,10 +57,10 @@ function BlogModal({ post, onClose }: { post: BlogPost; onClose: () => void }) {
           </div>
         )}
 
-        <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <div className="lg:col-span-3 text-[1.7rem] leading-relaxed text-muted-foreground whitespace-pre-wrap">{post.content}</div>
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="lg:col-span-7 text-[1.7rem] leading-relaxed text-muted-foreground whitespace-pre-wrap">{post.content}</div>
           {post.videoUrl && (
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-5">
               <h4 className="text-[1.3rem] font-semibold text-foreground uppercase tracking-wide mb-2">Demo Video</h4>
               <video controls preload="metadata" className="w-full rounded-xl border border-card-border bg-black aspect-video object-contain">
                 <source src={post.videoUrl} type="video/mp4" />
@@ -73,7 +73,7 @@ function BlogModal({ post, onClose }: { post: BlogPost; onClose: () => void }) {
         {post.gallery && post.gallery.length > 0 && (
           <div className="mt-8">
             <h4 className="text-[1.3rem] font-semibold text-foreground uppercase tracking-wide mb-3">Gallery</h4>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {post.gallery.map((src) => (
                 <div key={src} className="rounded-xl overflow-hidden border border-card-border bg-black/40 hover:border-primary/30 transition-colors">
                   <img src={src} alt={src.split("/").pop() || "RescueAgent screen"} className="w-full h-auto object-contain" loading="lazy" />

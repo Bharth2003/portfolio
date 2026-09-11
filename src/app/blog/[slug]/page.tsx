@@ -23,29 +23,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const linkedProject = post.projectId ? projects.find((pr) => pr.id === post.projectId) : null;
 
   return (
-    <article className="section-container py-24 max-w-6xl">
+    <article className="w-full px-6 lg:px-10 xl:px-12 2xl:px-16 py-12 max-w-none">
       <Link href="/blog" className="text-[1.4rem] text-primary hover:underline">← All posts</Link>
-      <p className="mt-4 text-[1.4rem] text-primary uppercase tracking-wide">{post.date} • {post.readTime}</p>
-      <h1 className="mt-2 text-[4.2rem] font-bold text-foreground leading-tight max-w-3xl">{post.title}</h1>
-      <div className="flex flex-wrap gap-2 mt-4 max-w-3xl">
+      <p className="mt-3 text-[1.4rem] text-primary uppercase tracking-wide">{post.date} • {post.readTime}</p>
+      <h1 className="mt-2 text-[4.2rem] font-bold text-foreground leading-tight">{post.title}</h1>
+      <div className="flex flex-wrap gap-2 mt-3">
         {post.tags.map((t) => (
           <Badge key={t} variant="primary">{t}</Badge>
         ))}
       </div>
 
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-        <div className="lg:col-span-3">
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="lg:col-span-7">
           {post.coverImage && (
             <div className="rounded-2xl overflow-hidden border border-card-border bg-muted/20">
-              <img src={post.coverImage} alt={post.title} className="w-full h-auto max-h-[420px] object-contain bg-[#0a0e1a]" />
+              <img src={post.coverImage} alt={post.title} className="w-full h-auto max-h-[460px] object-contain bg-[#0a0e1a]" />
             </div>
           )}
           <div className="mt-6 text-[1.8rem] leading-relaxed text-muted-foreground whitespace-pre-wrap">{post.content}</div>
         </div>
-        <div className="lg:col-span-2 lg:sticky lg:top-24">
+        <div className="lg:col-span-5 lg:sticky lg:top-24">
           {post.videoUrl && (
             <div>
-              <h2 className="text-[1.6rem] font-semibold text-foreground uppercase tracking-wide">Demo Video</h2>
+              <h2 className="text-[1.4rem] font-semibold text-foreground uppercase tracking-wide">Demo Video</h2>
               <video controls preload="metadata" className="mt-3 w-full rounded-xl border border-card-border bg-black aspect-video object-contain">
                 <source src={post.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag. <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" className="text-primary underline">Download video</a>
@@ -67,9 +67,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </div>
 
       {post.gallery && post.gallery.length > 0 && (
-        <div className="mt-12">
-          <h2 className="text-[1.6rem] font-semibold text-foreground uppercase tracking-wide">Gallery</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
+        <div className="mt-10">
+          <h2 className="text-[1.4rem] font-semibold text-foreground uppercase tracking-wide">Gallery</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
             {post.gallery.map((src) => (
               <div key={src} className="rounded-xl overflow-hidden border border-card-border bg-black/40 hover:border-primary/30 transition-colors">
                 <img src={src} alt={src.split("/").pop() || "RescueAgent"} className="w-full h-auto object-contain" loading="lazy" />
