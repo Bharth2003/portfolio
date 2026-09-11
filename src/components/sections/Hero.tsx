@@ -59,7 +59,7 @@ export function Hero() {
               View Projects <ArrowRight size={28} />
             </Button>
             <Button href="/cv/my-cv.pdf" variant="outline" size="lg">
-              Download CV <Download size={28} />
+              View my CV <Download size={28} />
             </Button>
             <Button href="#contact" variant="ghost" size="lg">
               Get in Touch <Mail size={28} />
