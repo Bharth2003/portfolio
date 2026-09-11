@@ -20,27 +20,21 @@ export function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInLeft}
           >
-            <div className="space-y-8 text-muted-foreground text-[2rem] md:text-[2.5rem] leading-relaxed">
-              <p>
-                I'm an MSc Robotics student and a AI Enthusiasist with a deep passion for
-                building intelligent systems that operate safely in the real world. My
-                work sits at the intersection of Generative AI, Responsible AI, and
-                Robotics — developing systems that are not just capable, but trustworthy.
-              </p>
-              <p>
-                Currently pursuing my MSc in Robotics at the Heriot-Watt University, I
-                specialise in adversarial safety for embodied AI systems, multi-LLM
-                architectures,Intelligence systems, ROS and human-robot interaction. My research directly addresses
-                the critical challenge of deploying AI agents safely in physical environments like Multi modal model agents using with 
-                Robots to find the State-of-the-Art and Mixture of Expertise(MoE).
-              </p>
-              <p>
-                With a B.E in Mechatronics Engineering and hands-on experience across
-                the full AI stack building ROS 2 navigation systems to Mechatronics 
-                related work like CNC, Simulations of FANUC, ABB, where I bring both
-                theoretical depth and practical engineering skills to every project.
-              </p>
+            <div className="rounded-2xl overflow-hidden border border-card-border bg-black shadow-xl">
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full h-auto max-h-[520px] object-contain bg-black"
+                poster="/images/projects/rescue-agent.svg"
+              >
+                <source src="/videos/about-me.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+            <p className="mt-4 text-[1.5rem] text-muted-foreground text-center">
+              About me — in my own words
+            </p>
           </motion.div>
 
           <motion.div
