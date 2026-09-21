@@ -11,10 +11,7 @@ export function Experience() {
   return (
     <section id="experience" className="py-24 bg-muted/30">
       <div className="section-container">
-        <SectionHeading
-          title="Experience & Education"
-          subtitle="My journey building AI systems and studying intelligent robotics"
-        />
+        <SectionHeading title="Previous Experiences" />
 
         <motion.div
           variants={staggerContainer}
@@ -42,10 +39,11 @@ export function Experience() {
                   )}
                 </div>
 
-                <div
+                <motion.div
+                  whileHover={{ y: -6 }}
                   className={cn(
                     "flex-1 p-8 rounded-xl bg-card border border-card-border",
-                    "hover:border-primary/30 transition-colors"
+                    "hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
                   )}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
@@ -137,7 +135,7 @@ export function Experience() {
                       {item.skillsDeveloped}
                     </p>
                   )}
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
