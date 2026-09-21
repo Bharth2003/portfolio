@@ -38,10 +38,14 @@ export interface ExperienceItem {
   type: "work" | "education";
   title: string;
   organization: string;
-  location: string;
-  startDate: string;
-  endDate: string;
-  description: string[];
+  location?: string;
+  startDate?: string;
+  endDate?: string;
+  description?: string[];
+  responsibilities?: string[];
+  contributions?: string[];
+  mission?: string;
+  skillsDeveloped?: string;
   logo?: string;
 }
 
