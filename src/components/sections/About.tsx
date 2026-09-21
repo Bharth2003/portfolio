@@ -35,23 +35,6 @@ export function About() {
             <p className="mt-4 text-[1.5rem] text-muted-foreground text-center">
               About me — in my own words
             </p>
-            <div className="mt-8 rounded-2xl bg-card border border-card-border p-8">
-              <h3 className="text-[2.2rem] font-bold text-foreground">USP</h3>
-              <ul className="mt-4 space-y-4 text-[1.7rem] leading-relaxed text-muted-foreground list-disc pl-6">
-                <li>
-                  Expertise in developing adversarial attack and defence frameworks for LLM-powered embodied agents, increasing AI safety and responsible deployment.
-                </li>
-                <li>
-                  Practical experience integrating large language models with robotic platforms to enable natural language understanding and intelligent decision-making.
-                </li>
-                <li>
-                  Professional background in automating quality validation for robotic production systems at Hyundai, driving operational excellence through data analysis.
-                </li>
-                <li>
-                  Skilled in building cloud-connected IoT architectures and data pipelines for real-time monitoring, relevant to scalable AI and machine learning integrations.
-                </li>
-              </ul>
-            </div>
           </motion.div>
 
           <motion.div
@@ -81,6 +64,30 @@ export function About() {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInLeft}
+          className="mt-12 rounded-2xl bg-card border border-card-border p-10 lg:p-14 shadow-xl"
+        >
+          <h3 className="text-[3.2rem] font-bold text-foreground">USP</h3>
+          <ul className="mt-6 space-y-6 text-[2.4rem] leading-relaxed text-muted-foreground list-disc pl-8">
+            <li>
+              Expertise in developing adversarial attack and defence frameworks for LLM-powered embodied agents, increasing AI safety and responsible deployment.
+            </li>
+            <li>
+              Practical experience integrating large language models with robotic platforms to enable natural language understanding and intelligent decision-making.
+            </li>
+            <li>
+              Professional background in automating quality validation for robotic production systems at Hyundai, driving operational excellence through data analysis.
+            </li>
+            <li>
+              Skilled in building cloud-connected IoT architectures and data pipelines for real-time monitoring, relevant to scalable AI and machine learning integrations.
+            </li>
+          </ul>
+        </motion.div>
       </div>
     </section>
   );
