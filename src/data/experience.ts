@@ -49,7 +49,7 @@ export const experience: ExperienceItem[] = [
     organization: "Heriot-Watt University",
     location: "Heriot-Watt University, UK",
     startDate: "Sep 2025",
-    endDate: "Present",
+    endDate: "Sep 2026",
     description: [
       "Specialising in autonomous systems, embodied AI, and human-robot interaction",
       "Research focus on integrating LLMs with robotic systems for intelligent decision-making",
