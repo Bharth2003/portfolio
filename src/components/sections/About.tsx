@@ -88,6 +88,58 @@ export function About() {
             </li>
           </ul>
         </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInLeft}
+          className="mt-12"
+        >
+          <div className="rounded-2xl bg-card border border-card-border p-10 lg:p-12 shadow-xl">
+            <h3 className="text-[3.2rem] font-bold text-foreground">Profile Fit</h3>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-8 mt-8">
+            {[
+              {
+                title: "LLM Attack & Defence Systems",
+                description:
+                  "Developing structured attack and defence frameworks across language model environments improved overall system robustness.",
+              },
+              {
+                title: "Applied Prompt Engineering",
+                description:
+                  "Applying targeted prompt engineering approaches improved both task execution performance and natural language understanding in AI systems.",
+              },
+              {
+                title: "Machine Learning for Autonomous Systems",
+                description:
+                  "Implementing algorithms like Kalman Filters and SLAM improved the accuracy and performance of autonomous navigation systems.",
+              },
+              {
+                title: "IoT System Architecture & Integration",
+                description:
+                  "Building end-to-end cloud-connected IoT architectures enabled real-time data monitoring and insightful analytics for environmental systems.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl overflow-hidden bg-card border border-card-border shadow-xl hover:border-primary/30 transition-colors"
+              >
+                <div className="h-[110px] bg-[#2f2bb5]" />
+                <div className="p-8 lg:p-10">
+                  <h4 className="text-[2.6rem] font-bold text-foreground leading-tight">
+                    {item.title}
+                  </h4>
+                  <p className="mt-3 text-[2rem] leading-relaxed text-muted-foreground">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
