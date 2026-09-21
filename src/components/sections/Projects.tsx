@@ -63,7 +63,28 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             </div>
 
             <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed text-[2rem]">
-              <p>{project.longDescription || project.description}</p>
+              {project.projectDescription ? (
+                <>
+                  <p>
+                    <span className="font-semibold text-foreground">Project Description: </span>
+                    {project.projectDescription}
+                  </p>
+                  {project.solution && (
+                    <p>
+                      <span className="font-semibold text-foreground">Solution: </span>
+                      {project.solution}
+                    </p>
+                  )}
+                  {project.conclusion && (
+                    <p>
+                      <span className="font-semibold text-foreground">Conclusion: </span>
+                      {project.conclusion}
+                    </p>
+                  )}
+                </>
+              ) : (
+                <p>{project.longDescription || project.description}</p>
+              )}
             </div>
           </div>
 

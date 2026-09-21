@@ -21,6 +21,9 @@ export interface Project {
   tagline?: string;
   description: string;
   longDescription?: string;
+  projectDescription?: string;
+  solution?: string;
+  conclusion?: string;
   image: string;
   tags: string[];
   metrics?: string;

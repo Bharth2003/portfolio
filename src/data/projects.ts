@@ -60,9 +60,13 @@ export const projects: Project[] = [
     title: "Adversarial Safety in Embodied AI",
     tagline: "LLM Attack & Defence System for Responsible AI",
     description:
-      "Designed and implemented an adversarial attack-and-defence framework for LLM-driven agents operating in AI2-THOR simulation environments. Built a multi-LLM architecture orchestrating Claude, Ollama, and fine-tuned Hugging Face models to test robustness of embodied AI systems against prompt injection and adversarial manipulation.",
-    longDescription:
-      "This research project tackles one of the most critical challenges in deploying AI agents in real-world environments — safety under adversarial conditions. The system implements a red-team/blue-team architecture where attacker LLMs attempt to manipulate embodied agents into unsafe actions, while defender models implement guardrails and safety verification. Fine-tuned models on Hugging Face provide domain-specific safety classification, and the entire pipeline runs in AI2-THOR for realistic 3D environment testing.",
+      "This project revolved around building secure and reliable AI systems, specifically addressing the safety of Large Language Models (LLMs) used within operating in varied environments. Focus was placed on understanding and mitigating potential vulnerabilities, directly relevant to the role of an Applied AI Engineer who needs to ensure AI system integrity.",
+    projectDescription:
+      "This project revolved around building secure and reliable AI systems, specifically addressing the safety of Large Language Models (LLMs) used within operating in varied environments. Focus was placed on understanding and mitigating potential vulnerabilities, directly relevant to the role of an Applied AI Engineer who needs to ensure AI system integrity.",
+    solution:
+      "An adversarial attack and defence framework was designed and implemented for LLM-powered robots in AI2-THOR ecosystems. This involved setting up a multi-LLM infrastructure, integrating models like Anthropic Claude and Ollama, and developing prompt injection testing to evaluate vulnerabilities in embodied AI environments. Transformer-based models were fine-tuned with Hugging Face frameworks to build resilience. Prompt safety mechanisms were engineered to reduce harmful outputs, and benchmarking pipelines were established to compare performance across different LLM configurations and providers.",
+    conclusion:
+      "The project successfully established methodologies for auditability, transparency, and model governance, reducing the system's susceptibility to adversarial attacks and improving the reliability of LLM outputs in embodied AI agents. This work directly supports ethical and responsible AI objectives.",
     image: "/images/projects/adversarial-ai.svg",
     tags: ["Python", "Anthropic Claude", "Ollama", "Hugging Face", "AI2-THOR"],
     metrics: "Multi-LLM safety framework for regulated industries",
@@ -70,16 +74,6 @@ export const projects: Project[] = [
     institution: "Heriot-Watt University",
     year: "2025 – Present",
     featured: true,
-    challenges: [
-      "Designing adversarial prompts that realistically test embodied agent safety boundaries",
-      "Orchestrating multiple LLMs with different capabilities in a unified evaluation pipeline",
-      "Balancing agent capability with safety constraints in physical simulation",
-    ],
-    outcomes: [
-      "Built production-grade adversarial testing pipeline for LLM-driven robots",
-      "Demonstrated defence mechanisms reducing unsafe actions by 90%+",
-      "Directly applicable to Responsible AI compliance in regulated industries",
-    ],
   },
   {
     id: "cdpr-machine-vision",
@@ -138,24 +132,18 @@ export const projects: Project[] = [
     title: "GenAI Integration with Robotic Systems",
     tagline: "Natural Language HRI with Vision Understanding",
     description:
-      "Integrated Large Language Models into physical Marty robots for natural language understanding and context-aware behaviour. Built a multi-modal system combining LLM reasoning with OpenCV computer vision for real-time human-robot interaction.",
-    longDescription:
-      "This project bridges the gap between powerful language models and physical robotic systems. The system enables users to give natural language commands to Marty robots, which are interpreted through an LLM pipeline that considers visual context from the robot's camera feed. OpenCV processes the environment in real-time, providing scene understanding that informs the LLM's decision-making for appropriate physical actions.",
+      "This work involved merging advanced language models with robotic platforms, allowing robots to understand and respond to natural language. For an Applied AI Engineer, this highlights an ability to bridge powerful AI models with practical hardware, resulting in intelligent robotic behaviours and improved human-robot interactions.",
+    projectDescription:
+      "This work involved merging advanced language models with robotic platforms, allowing robots to understand and respond to natural language. For an Applied AI Engineer, this highlights an ability to bridge powerful AI models with practical hardware, resulting in intelligent robotic behaviours and improved human-robot interactions.",
+    solution:
+      "This project focused on integrating advanced large language models with robotic platforms. Context-aware interaction workflows were developed and prompt engineering strategies were applied to enhance robotic control and task execution. Multimodal AI solutions were designed, combining language understanding with computer vision technologies, which included implementing OpenCV-based image processing for perception-driven robotic applications. The aim was to create smooth communication between humans and robots through conversational AI and contextual understanding.",
+    conclusion:
+      "As a result, human-robot interaction experiences were enhanced, demonstrating how conversational AI and contextual awareness can lead to more natural and effective communication with robotic systems.",
     image: "/images/projects/genai-hri.svg",
     tags: ["Python", "LLMs", "OpenCV", "Marty Robot", "Multi-modal AI"],
     metrics: "Real-time natural language robot control",
     github: "https://github.com/Bharth2003",
     featured: true,
-    challenges: [
-      "Bridging the latency gap between LLM inference and real-time robot control",
-      "Grounding language understanding in physical robot capabilities",
-      "Fusing visual and linguistic information for context-aware actions",
-    ],
-    outcomes: [
-      "Achieved real-time conversational robot interaction with <500ms response",
-      "Multi-modal understanding combining vision + language for situated actions",
-      "Demonstrated natural command interface reducing operator training time",
-    ],
   },
   {
     id: "iot-pipeline",
@@ -186,24 +174,18 @@ export const projects: Project[] = [
     title: "Autonomous Navigation System",
     tagline: "ROS 2 SLAM with Advanced Path Planning",
     description:
-      "Implemented a complete autonomous navigation stack using ROS 2 with SLAM for real-time mapping, Kalman filter-based noise reduction for sensor fusion, and benchmarked multiple path planning algorithms for optimal performance.",
-    longDescription:
-      "This project implements a production-grade autonomous navigation system using the ROS 2 framework. The system combines simultaneous localisation and mapping (SLAM) with extended Kalman filter fusion of LiDAR and IMU data for robust pose estimation. Multiple path planning algorithms (A*, RRT*, DWA) were implemented and benchmarked against standard metrics including path length, computation time, and obstacle clearance.",
+      "This project focused on developing robust autonomous navigation capabilities for robotic platforms. This demonstrates essential skills for an Applied AI Engineer in developing decision-making algorithms and deploying them in real-world or simulated robotic systems.",
+    projectDescription:
+      "This project focused on developing robust autonomous navigation capabilities for robotic platforms. This demonstrates essential skills for an Applied AI Engineer in developing decision-making algorithms and deploying them in real-world or simulated robotic systems.",
+    solution:
+      "An autonomous navigation framework was carefully developed, which incorporated SLAM algorithms for real-time mapping. Kalman Filter methodologies were introduced to improve localisation accuracy and sensor fusion. Python and C++ software of production quality were engineered, following established best practices. Diverse path-planning algorithms were evaluated to optimise navigation efficiency and prevent obstacles. Scalable robotics architectures capable of supporting autonomous decision-making and route generation were concurrently designed. Performance benchmarking was executed against navigation approaches deployed in simulated environments.",
+    conclusion:
+      "The work successfully delivered an evaluated autonomous navigation system that could competently map environments, localise accurately, and plan efficient, obstacle-avoiding paths, making robots more autonomous and useful.",
     image: "/images/projects/autonomous-nav.svg",
     tags: ["Python", "C++", "ROS 2", "SLAM", "Kalman Filter", "Gazebo"],
     metrics: "Real-time SLAM at 10Hz with 95% localisation accuracy",
     github: "https://github.com/Bharth2003",
     featured: true,
-    challenges: [
-      "Achieving real-time SLAM performance with limited compute resources",
-      "Tuning Kalman filter parameters for heterogeneous sensor fusion",
-      "Benchmarking path planners fairly across diverse environment configurations",
-    ],
-    outcomes: [
-      "10Hz real-time mapping and localisation in complex environments",
-      "95% pose estimation accuracy with sensor fusion",
-      "Comprehensive benchmark comparing 3 path planning algorithms",
-    ],
   },
   {
     id: "waste-rover",
