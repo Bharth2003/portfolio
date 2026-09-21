@@ -9,8 +9,8 @@ export function About() {
     <section id="about" className="py-24">
       <div className="section-container">
         <SectionHeading
-          title="About Me"
-          subtitle="Passionate about making AI systems and building intelligent solutions in robotics that are both powerful and safe"
+          title="Quick Summary"
+          subtitle="Focused on advancing Applied AI Engineering by developing intelligent, robust, and ethical AI systems. Combining expertise in LLM integration, robotic systems, and machine learning with a strong foundation in AI safety principles to build context-aware and reliable solutions. Driven to solve complex challenges across areas such as autonomous navigation, human-robot interaction, and safe AI deployment."
         />
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
