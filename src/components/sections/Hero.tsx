@@ -46,7 +46,7 @@ export function Hero() {
             variants={slideInFromBottom}
             className="mt-10 text-[2.5rem] md:text-[3rem] text-muted-foreground max-w-4xl mx-auto leading-relaxed"
           >
-            MSc Robotics student specialising in Intelligence systems, HRI, IoT, ROS, Generative AI, LLM safety, and
+            MSc Robotics Graduate specialising in Intelligence systems, HRI, IoT, ROS, Generative AI, LLM safety, and
             embodied intelligence. Bridging the gap between powerful AI models and
             safe real-world deployment.
           </motion.p>
