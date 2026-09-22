@@ -20,21 +20,17 @@ export function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInLeft}
           >
-            <div className="rounded-2xl overflow-hidden border border-card-border bg-black shadow-xl">
-              <video
-                controls
-                preload="metadata"
-                playsInline
-                poster="/images/about-thumbnail.png"
-                className="w-full h-auto max-h-[520px] object-contain bg-black"
-              >
-                <source src="/videos/about-me.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div className="space-y-8 text-muted-foreground text-[2rem] md:text-[2.5rem] leading-relaxed">
+              <p>
+                My MSc in Robotics and Mechatronics Engineering background, reinforced by an internship at Hyundai Motors, has given me a deep understanding of developing and optimising AI-driven robotic systems. From automating quality checks on assembly lines to managing operational workflows, I continually look for ways to boost efficiency and reliability through intelligent automation.
+              </p>
+              <p>
+                What truly sets me apart is my practical design and security experience in AI. My projects, like developing an adversarial attack and defence system for embodied AI and integrating large language models with robotic platforms, highlight my ability to build robust, safe, and intelligent AI solutions.
+              </p>
+              <p>
+                Now, I&apos;m aiming for an opportunity to apply these skills in an Applied AI Engineer capacity. I&apos;m keen to contribute to real-world AI applications, making a tangible impact on product development and operational effectiveness. Take a look at my portfolio for a deeper dive into how I turn complex challenges into well-designed AI solutions.
+              </p>
             </div>
-            <p className="mt-4 text-[1.5rem] text-muted-foreground text-center">
-              About me — in my own words
-            </p>
           </motion.div>
 
           <motion.div
