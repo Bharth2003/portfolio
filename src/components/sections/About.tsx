@@ -20,7 +20,7 @@ export function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInLeft}
           >
-            <div className="space-y-8 text-muted-foreground text-[2rem] md:text-[2.5rem] leading-relaxed">
+            <div className="space-y-8 text-foreground font-bold text-[2rem] md:text-[2.5rem] leading-relaxed">
               <p>
                 My MSc in Robotics and Mechatronics Engineering background, reinforced by an internship at Hyundai Motors, has given me a deep understanding of developing and optimising AI-driven robotic systems. From automating quality checks on assembly lines to managing operational workflows, I continually look for ways to boost efficiency and reliability through intelligent automation.
               </p>
