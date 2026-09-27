@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Download, ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { heroStagger, slideInFromBottom } from "@/lib/animations";
 import { Button } from "@/components/ui/Button";
 import { TypingEffect } from "@/components/ui/TypingEffect";
@@ -57,9 +57,6 @@ export function Hero() {
           >
             <Button href="#projects" variant="primary" size="lg">
               View Projects <ArrowRight size={28} />
-            </Button>
-            <Button href="/cv/my-cv.pdf" variant="outline" size="lg">
-              View my CV <Download size={28} />
             </Button>
             <Button href="#contact" variant="ghost" size="lg">
               Get in Touch <Mail size={28} />
